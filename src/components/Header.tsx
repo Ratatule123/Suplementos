@@ -2,6 +2,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -9,10 +10,13 @@ export default function Header() {
       <nav className="container mx-auto flex justify-between items-center py-5 px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center hover:opacity-80 transition">
-          <img
+          <Image
             src="/logo.jpg"
             alt="Logo"
-            className="w-28 h-28 object-contain mr-4"
+            width={112}   
+            height={112}  
+            style={{ objectFit: 'contain' }}  
+            className="mr-4"
           />
         </Link>
 
@@ -52,5 +56,3 @@ export default function Header() {
     </header>
   )
 }
-
-
